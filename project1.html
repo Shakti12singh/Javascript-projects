@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+html, body{
+    height: 100%;
+    width: 100%;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(103, 137, 250);
+}
+
+#cards{
+    border-radius: 10px;
+    width: 250px;
+    height: 350px;
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    text-align: center;
+}
+
+#cards img{
+    height: 50%;
+    width: 100%;
+    object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+}
+
+#cards h1{
+    font-size: 25px;
+    margin: 10px 0px;
+}
+
+#cards h5{
+    font-size: 20px;
+    color: red;
+    margin: 20px;
+}
+
+#cards button{
+    background-color: rgb(117, 248, 198);
+    color: rgb(0, 0, 0);
+    font-weight: 300;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    margin: 5px;
+    cursor: pointer;
+}
+
+
+    </style>
+
+</head>
+<body>
+    
+
+<!-- ADD FRIEND AND REMOVE FRIEND FUNCTION -->
+
+<div id="cards">
+<img src="https://www.koimoi.com/wp-content/new-galleries/2023/03/how-robert-downey-jrs-return-to-mcu-would-look-like-this-fan-made-trailer-of-iron-man-4-will-win-your-hearts-01.jpg" alt="">
+<h1>Iron Man</h1>
+<h5>Stranger</h5>
+
+<div id="btn-container">
+
+<button id="add">Add Friend</button>
+</div>
+
+</div>
+
+    <script>
+
+var istatus = document.querySelector("h5")
+
+var btn = document.querySelector("#add")
+
+var check = 0
+
+btn.addEventListener("click" ,function(){
+    if(check == 0){
+        istatus.innerHTML = "Friends Now"
+    istatus.style.color = "green"
+    btn.innerHTML = "Remove Friend"
+    check = 1
+    }
+    else{
+        istatus.innerHTML = "stranger"
+    istatus.style.color = "red"
+    btn.innerHTML = "Add Friend" 
+
+    check = 0
+    }
+   
+
+})
+
+
+
+    </script>
+
+
+</body>
+</html>

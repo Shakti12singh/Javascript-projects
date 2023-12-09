@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.6.0/fonts/remixicon.css" rel="stylesheet">
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgb(103, 137, 250);
+        }
+
+
+        #container {
+            height: 330px;
+            width: 280px;
+            background-color: rgb(255, 255, 255);
+            border-radius: 10px;
+            position: relative;
+            overflow: hidden;
+
+        }
+
+        #container img {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            border-radius: 10px;
+
+        }
+
+        #container i {
+            color: white;
+            font-size: 60px;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%) scale(0);
+            opacity: 0;
+            transition: transform ease 0.5s;
+        }
+    </style>
+</head>
+
+<body>
+
+<!-- INSTAGRAM LIKE FUNCTION -->
+
+    <div id="container">
+        <img src="https://images.odishatv.in/uploadimage/library/16_9/16_9_1/recent_photo_1699339963.webp" alt="">
+
+        <i class="ri-heart-3-fill"></i>
+    </div>
+
+    <script>
+        var con = document.querySelector("#container")
+
+        var icon = document.querySelector("i")
+
+        con.addEventListener("dblclick", function () {
+            icon.style.transform = "translate(-50%,-50%) scale(1)"
+            icon.style.opacity = "0.8"
+
+            setTimeout(function () {
+                icon.style.opacity = "0"
+            }, 1000)
+
+            setTimeout(function () {
+                icon.style.transform = "translate(-50%,-50%) scale(0)"
+            }, 2000)
+        })
+
+
+
+
+    </script>
+</body>
+
+</html>
